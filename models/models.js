@@ -37,7 +37,7 @@ const Blocks = sequelize.define('block',
 const Accounts = sequelize.define('accounts', 
 {
   id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull:false},
-  amount: {type: DataTypes.NUMBER, allowNull:false},
+  amount: {type: DataTypes.DECIMAL, allowNull:false},
   name: {type: DataTypes.STRING, allowNull:false},
   requisites: {type: DataTypes.STRING, unique: true, allowNull:false},
 }, { indexes: [
@@ -63,17 +63,17 @@ const Currency = sequelize.define('currency',
 const Credit = sequelize.define('credit', 
 {
   id:{type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull:false},
-  amount:{type: DataTypes.NUMBER, allowNull:false},
+  amount:{type: DataTypes.DECIMAL, allowNull:false},
   term:{type: DataTypes.INTEGER, allowNull:false },
-  refinancingRate: {type: DataTypes.NUMBER, allowNull: false},
-  month_amount:{type: DataTypes.NUMBER, allowNull:false},
+  refinancingRate: {type: DataTypes.DECIMAL, allowNull: false},
+  month_amount:{type: DataTypes.DECIMAL, allowNull:false},
   userId:{type: DataTypes.INTEGER, allowNull:false },
 })
 
 const History = sequelize.define('history', 
 {
   id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull:false},
-  amount: {type: DataTypes.NUMBER, allowNull:false},
+  amount: {type: DataTypes.DECIMAL, allowNull:false},
   sender: {type: DataTypes.STRING, allowNull:false},
   senderName: {type: DataTypes.STRING, allowNull:false},
   receiver: { type: DataTypes.STRING, allowNull:false },
