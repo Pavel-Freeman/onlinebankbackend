@@ -25,19 +25,19 @@ const createAccountType = async(type) =>{
 }catch(e){}
 }
 
-const createBankAccount = async() =>{
-  try{
-    await Accounts.create({
-      id : 0,
-      amount: 10000000,
-      name: 'Bank',
-      userId: 0,
-      currencyId: 978,
-      typeAccountId: 1,
-      requisites: 'BY00BANK00000000000000000000'
-    })
-  }catch(e){}
-}
+// const createBankAccount = async() =>{
+//   try{
+//     await Accounts.create({
+//       id : 0,
+//       amount: 10000000,
+//       name: 'Bank',
+//       userId: 0,
+//       currencyId: 978,
+//       typeAccountId: 1,
+//       requisites: 'BY00BANK00000000000000000000'
+//     })
+//   }catch(e){}
+// }
 
 
 
